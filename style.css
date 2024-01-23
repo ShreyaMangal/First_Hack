@@ -1,0 +1,67 @@
+body {
+    margin: 6;
+    padding: 4;
+    font-family: 'Open Dyslexic', sans-serif;
+    background-color: rgb(250,240,255);
+    text-align: center;
+}
+ 
+header {
+    background-color: rgb(108,51,158);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1em 0;
+}
+
+#job-listings {
+    margin: 4em;
+}
+
+.job {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 50px;
+    color: rgb(255, 255, 255)
+}
+
+h2 {
+    font-size: 40px;
+    color: rgb(0, 0, 0)
+}
+
+#user-input {
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 2px;
+    font-size: 40px;
+    color: rgb(0, 0, 0)
+}
+select {
+    width: calc(100% - 10px);
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.icon {
+    margin-right: 5px
+}
