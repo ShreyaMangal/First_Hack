@@ -1,36 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
- 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+import React, { useState } from 'react';
+import './YourComponent.css';
 
-    <title>Job Portal</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="dys.css">
-    <style>
-        body { 
-            font-family: 'Open Dyslexic', sans-serif;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Hello Name</h1>
-        <div class="logo"><a href="#">SkillSails</a></div>
-        <div class="menu">
-            <a href=""><ion-icon name="close" class="close"></ion-icon></a>
-            <ul>
-                <li><a href="#" class="under">HOME</a></li>
-                <li><a href="#" class="under">START OVER</a></li>
-                <li><a href="#" class="under">ABOUT US</a></li>
-            </ul>
-        </div>
-    </header>
+const YourComponent = () => {
+    const [name, setName] = useState('');
+
+    useEffect(() => {
+        $('#industry, #location, #job-role').select2();
+
+    }, []);
+
+    const searchJobs = () => {
+        console.log('Search Jobs');
+    };
+
+    return (
+    <div>
+        <header>
+            <div class="logo"><a href="#">SkillSails</a></div>
+            <div class="menu">
+                <a href=""><ion-icon name="close" class="close"></ion-icon></a>
+                <ul>
+                    <li><a href="#" class="under">HOME</a></li>
+                    <li><a href="#" class="under">START OVER</a></li>
+                    <li><a href="#" class="under">ABOUT US</a></li>
+                </ul>
+            </div>
+            <h1>Hello Name</h1>
+        </header>
 
     <h2>Let's begin your dream job search,</h2>
     <h2>just give us a glimpse.</h2>
@@ -45,7 +41,7 @@
                 <option value="technology">Technology</option>
                 <option value="finance">Finance</option>
                 <option value="healthcare">Healthcare</option>
-                <!-- Add more options as needed -->
+                
             </select>
             
 
@@ -56,7 +52,7 @@
                     <option value="technology">Technology</option>
                     <option value="finance">Finance</option>
                     <option value="healthcare">Healthcare</option>
-                    <!-- Add more options as needed -->
+                    
                 </select>
             
             
@@ -68,24 +64,27 @@
                     <option value="technology">Technology</option>
                     <option value="finance">Finance</option>
                     <option value="healthcare">Healthcare</option>
-                    <!-- Add more options as needed -->
+                    
                 </select>
         
             <div class="button-container">
             <button type="button" onclick="searchJobs()">Search Jobs</button>
-        </div>
+            </div>
         </form>
     </section>
     
 
     <section id="job-listings">
-        <!--Job listings will be added dynamically using JavaScript-->
+       
     </section> 
-    <script src="script.js"></script>
+    {/*<script src="script.js"></script>
     <script>
         $(document).ready(function () {
             $('#industry, #location, #job-role').select2();
         });
-    </script>
-</body>
-</html>
+    </script>*/}
+</div>
+    );
+};
+
+export default YourComponent;
